@@ -1,0 +1,170 @@
+\documentclass[14pt,a4paper]{xmuthesis}
+\usepackage{booktabs}
+\usepackage{diagbox}
+\usepackage{hyperref}
+\usepackage{pythonhighlight}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[version=4]{mhchem}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+
+\geometry{top=2.1cm}
+\title{厦门大学毕业论文模板}
+\author{DiggerWang-Cyclones}
+
+\begin{document}
+
+%%%---------------封面---------------%%%
+\begin{center}  % 居中
+\includegraphics[width=2.4in]{xiaoming.png}\\
+\vspace{1.6cm}
+% \CJKfakebold{} 加粗命令
+\titleone{\CJKfakebold{本科毕业论文（设计）}}\\
+\vspace{0.2cm}
+\titletwo{\CJKfakebold{主修专业}}\\
+\vspace{0.7cm}
+\heiti\huge{基于机器学习势能的无定形氧化铟半导体的分子动力学模拟及结构分析}\\
+\vspace{0.4cm}
+\Large{\CJKfakebold{Molecular Dynamics Simulation and Structure Analysis of Amorphous Indium Oxide Semiconductor Based on Machine Learning Potential}}\\
+\vspace{0.8cm}
+\end{center}
+\large
+\begin{flushleft}
+    \hspace{8em}姓\hspace{2em}名：\hspace{0.5em}\\[0.5em]
+    \hspace{8em}学\hspace{2em}号：\hspace{0.5em}\\[0.5em]
+    \hspace{8em}学\hspace{2em}院：\hspace{0.5em}\\[0.5em]
+    \hspace{8em}专\hspace{2em}业：\hspace{0.5em}\\[0.5em]
+    \hspace{8em}年\hspace{2em}级：\hspace{0.5em}\\[0.5em]
+    \hspace{6em}校内指导老师：\hspace{0.5em}(姓名)\hspace{0.5em} (职务)\\[0.5em]
+   \hspace{6em}校外指导老师：\hspace{0.5em}(姓名)\hspace{0.5em} (职务)
+\end{flushleft}
+\vspace{0.6cm}
+\begin{center}
+    2024年x月x日
+\end{center}
+\thispagestyle{empty}
+\addtocounter{pseudopage}{-1}
+\clearpage
+\pagenumbering{Roman}
+
+%%%---------------承诺书---------------%%%
+\begin{center}
+ \heiti{\Large{厦门大学本科学位论文诚信承诺书}}   
+\end{center}
+\vspace{1cm}
+
+本人呈交的学位论文是在导师指导下独立完成的研究成果。本人在论文写作中参考其他个人或集体已经发表的研究成果，均在文中以适当方式明确标明，并符合相关法律规范及《厦门大学本科毕业论文（设计）规范》。
+
+该学位论文为（ ）课题（组）的研究成果，获得（ ）课题（组）经费或实验室的资助，在（ ）实验室完成（请在以上括号内填写课题或课题组负责人或实验室名称，未有此项声明内容的，可以不作特别声明）。
+
+本人承诺辅修专业毕业论文（设计）（如有）的内容与主修专业不存在相同与相近情况。
+\vspace{2cm}
+\begin{flushleft}
+    \hspace{16em}学生声明（签名）：\\
+    \hspace{21em}年\hspace{2em}月\hspace{2em}日
+\end{flushleft}
+\thispagestyle{plain}
+\addtocounter{pseudopage}{-1}
+\blankpage
+%%%---------------知悉书---------------%%%
+\begin{center}
+    \CJKfakebold{\threesize{知\chinesespace 悉\chinesespace 书}}
+\end{center}
+\vspace{1cm}
+
+本人2023年6月开始， 在厦门大学化学化工学院（ ）老师的
+课题组参与了 “ ” 等课题的
+研究， 本人知悉这期间在本课题组所接触的数据和工艺等的知识产权
+均属于厦门大学所有， 受相关法律法规的保护。 因此， 在即将毕业之
+际， 本人特此保证：
+\begin{enumerate}
+    \item [(1)]将本阶段获得的实验数据用于任何目的（如： 发表学术论文、
+    会议论文、 申请专利、 产业化等） 之前， 需经（ ）老师的书
+    面许可。
+    \item [(2)]不将与实验相关的秘密以任何形式泄露给他人。
+    \item [(3)]学位论文、 实验数据提供给他人阅读、 复制之前， 需经（ ）老
+    师的书面许可。
+\end{enumerate}
+
+\vspace{2cm}
+\begin{flushleft}
+    \hspace{18em}系别：\\
+    \hspace{18em}专业：\\
+    \hspace{18em}学号：\\
+    \hspace{18em}学生（签字）：\\
+    \hspace{21em}年\hspace{2em}月\hspace{2em}日
+\end{flushleft}
+\thispagestyle{plain}
+\blankpage
+%%%---------------致谢---------------%%%
+\normalsize
+\begin{thesisacknowledgement}
+    \thispagestyle{plain}
+值此论文完成之际，......
+\end{thesisacknowledgement}
+\blankpage
+
+
+
+
+%%%---------------摘要---------------%%%
+\normalsize
+\begin{chineseabstract}
+
+在这里输入摘要内容
+
+\chinesekeyword{神经网络}
+\end{chineseabstract}
+
+\begin{englishabstract}
+
+Write what you want to express here
+
+\englishkeyword{Neural Network}
+\end{englishabstract}
+
+%%%---------------目录---------------%%%
+\tableofcontents
+\thispagestyle{plain}
+
+\blankpage
+\titleformat{\chapter}[block]
+  {\fontsize{15pt}{15pt}\selectfont\heiti\thispagestyle{fancy}}
+  {\thechapter}{7.5pt}{}
+%%%---------------第一章---------------%%%
+\setcounter{pseudopage}{1}
+\pagenumbering{arabic}
+\chapter[问题描述]{问题描述}
+6666666\citing{li2010new, lijinyan2010shi}
+\section{问题背景}
+\subsection{背景一}
+rfhbsdrtgrtae4wheta\citing{zhangsan2008}ewgEWGwgwgwg\citing{lijinyan2013shi}overleaf\citing{li2010new, zhangsan2008,lijinyan2013shi,overleaf}
+\section{选题意义}
+\blankpagearticle
+%%%---------------第二章---------------%%%
+\chapter{计算方法与细节}
+
+%%%---------------第三章---------------%%%
+
+
+%%%---------------第四章---------------%%%
+
+
+\titleformat{\chapter}[block]
+  {\centering\fontsize{15pt}{15pt}\selectfont\heiti\thispagestyle{fancy}}
+  {\thechapter}{7.5pt}{}
+%%%---------------文献---------------%%%
+\bibliographystyle{unsrt}
+\bibliography{publications}
+
+%%%---------------附录---------------%%%
+\thesisappendix
+
+% 致谢
+\thesisacknowledgement
+
+
+\end{document}
