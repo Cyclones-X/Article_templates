@@ -6,4 +6,4 @@
   "pdflatex-bibtex-pdflatex\*2" (英文文章)
   或
   "xelatex-bibtex-xelatex\*2" (中文文章) 
-  这两个编译链，否则会报错。
+  这两个编译链并且使用对应的编译链进行编译，否则会报错。
